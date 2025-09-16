@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form>
+
+        <label for="name">Name:</label>
+        <input type="text" name="username" id="name">   <!--name="value", name attribute used to match the information with database  -->
+
+        <br><br>
+
+        <label for="fname">Father Name:</label>
+        <input type="text" name="userFname" id="fname">
+
+        <br><br>
+
+        <label for="age">Age:</label>
+        <input type="number" name="userAge" id="age"> 
+
+        <br><br>
+
+        <label for="password">Password</label>
+        <input type="password" name="userPassword" id="password">
+
+        <br><br>
+
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="male" value="male"> <!--when name value is same then only one can select, not all-->
+
+        <label for="female">Female</label>   <!-- for-value and id-value must be same to link-->
+        <input type="radio" name="gender" id="female" value="female">
+
+        <label for="other">Other</label>
+        <input type="radio" name="gender" id="other" value="other"> <!--if value is not present then by default it will take gender=on, that's why value is defined -->
+
+        <br><br>
+
+        <label for="c++">C++</label>
+        <input type="checkbox" name="subject" id="c++" value="c++">
+
+        <label for="java">Java</label>
+        <input type="checkbox" name="subject" id="java" value="java">
+
+        <label for="python">Python</label>
+        <input type="checkbox" name="subject" id="python" value="python">
+
+        <label for="javascript">Javascript</label>
+        <input type="checkbox" name="subject" id="javascript" value="javascript">
+
+        <br><br>
+
+        <input type="submit">
+
+    </form>
+
+</body>
+</html>
+
+
+<!-- http://127.0.0.1:5500/index.html?username=adlkfjal&userFname=alkdsfjlkaf&userAge=21&userPassword=a3-048dkjf&gender=on -->
+
+<!-- http://127.0.0.1:5500/index.html?username=afa&userFname=asfad&userAge=23&userPassword=adsf&gender=male&subject=on&subject=on -->
