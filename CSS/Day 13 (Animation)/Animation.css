@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+}
+
+.container {
+    padding: 20px;
+    position: relative;
+}
+
+.box {
+    height: 200px;
+    width: 200px;
+    background-color: red;
+    animation-name: moving;
+    /* animation-duration: 3s; */
+    position: absolute;
+    /* no. of times animation execute */
+    /* animation-iteration-count: 4;  */
+    /* animation-iteration-count: infinite; */
+    
+    /* animation-timing-function: ease-in; slow->fast */
+    /* animation-timing-function: ease-out; fast->slow */
+    /* animation-timing-function: ease-in-out; slow->fast->slow */
+    /* animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1); */
+
+    /* direction */
+    /* animation-direction: alternate; */
+
+    /* animation-delay: 5s; */
+    
+
+    /* animation-iteration-count: infinite; */
+    /* animation-fill-mode: forwards; */
+    /* animation-fill-mode: backwards; */
+    
+    
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+
+/* @keyframes moving {
+    from {
+        background-color: palevioletred;
+        top: 10px;
+        left: 10px;
+        border-radius: 0px;
+    }
+    to {
+        background-color: blue;
+        top: 10px;
+        left: 600px;
+        border-radius: 50%;
+    }
+} */
+
+@keyframes moving {
+    0% {
+        background-color: palevioletred;
+        top: 10px;
+        left: 10px;
+    }
+    25% {
+        background-color: blue;
+        top: 10px;
+        left: 600px;
+    }
+    50% {
+        background-color: green;
+        top: 500px;
+        left: 600px
+    }
+    75% {
+        background-color: orange;
+        top: 500px;
+        left: 10px;
+    }
+    100% {
+        background-color: red;
+        top: 10px;
+        left: 10px;
+    }
+}
