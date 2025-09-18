@@ -67,12 +67,12 @@
     25% {
         background-color: blue;
         top: 10px;
-        left: 600px;
+        left: 800px;
     }
     50% {
         background-color: green;
         top: 500px;
-        left: 600px
+        left: 800px
     }
     75% {
         background-color: orange;
