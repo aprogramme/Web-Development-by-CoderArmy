@@ -1,0 +1,78 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    /* used for visualization (3D) */
+    perspective: 800px;
+}
+
+.box {
+    height: 150px;
+    width: 150px;
+    background-color: orange;
+
+    /* transition-property: background-color; */
+    /* transition-property: width; */
+    /* transition-property: height; */
+    /* transition-property: all; */
+    /* transition-duration: 3s; */
+
+    /* transition-timing-function: linear; */
+    /* transition-timing-function: ease-in; */
+    /* transition-timing-function: ease-out; */
+    /* transition-timing-function: linear; */
+    /* transition-delay: 1s; */
+
+    /* short hand property */
+    /* transition: all 3s linear 1s; */
+
+    
+    /* transform: translate(200px, 300px); */
+    
+    /* transform: rotate(30deg); */
+    /* transform: skewX(20deg); */
+    /* transform: skewY(20deg); */
+
+    transition: all 3s;
+    font-size: 30px;
+
+}
+
+/* .box:hover {
+    background-color: purple;
+    width: 300px;
+    height: 300px;
+} */
+
+.box:hover {
+    background-color: purple;
+    /* width: 300px;
+    height: 300px; */
+    /* transform: scale(2); */
+    /* transform: scaleX(2); */
+    /* transform: scaleY(2); */
+    /* transform: translate(100px, 200px); */
+    /* transform: translateX(200px); */
+    /* transform: translateY(200px); */
+
+    /* transform: translateZ(200px); */
+
+    /* transform: rotateX(80deg); */
+    /* transform: rotateY(80deg); */
+    /* transform: rotateZ(80deg); */
+
+}
+
+@keyframes moving {
+    
+}

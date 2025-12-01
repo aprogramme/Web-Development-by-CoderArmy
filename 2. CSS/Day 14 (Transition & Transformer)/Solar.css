@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.sun {
+    height: 80px;
+    width: 80px;
+    background-color: rgb(255, 213, 0);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    transform: translateX(50%);
+    box-shadow: 0px 0px 30px 40px yellow;
+}
+
+.earth {
+    height: 40px;
+    width: 40px;
+    background-color: blue;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    color: white;
+
+    animation-name: moving;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.mars {
+    height: 40px;
+    width: 40px;
+    background-color: red;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    color: white;
+
+    animation-name: moving1;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+}
+
+.jupitor {
+    height: 40px;
+    width: 40px;
+    background-color: gray;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    color: white;
+
+    animation-name: moving2;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-delay: 4s;
+}
+
+.urenus {
+    height: 40px;
+    width: 40px;
+    background-color: goldenrod;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    color: white;
+
+    animation-name: moving3;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-delay: 6s;
+}
+
+@keyframes moving {
+    from {
+        transform: rotate(0deg) translateX(200px);
+    }
+    to {
+        transform: rotate(360deg) translateX(200px);
+    }
+}
+
+@keyframes moving1 {
+    from {
+        transform: rotate(0deg) translateX(250px) translateY(100px);
+    }
+    to {
+        transform: rotate(360deg) translateX(250px) translateY(100px);
+    }
+}
+
+@keyframes moving2 {
+    from {
+        transform: rotate(0deg) translateX(300px) translateY(100px);
+    }
+    to {
+        transform: rotate(360deg) translateX(300px) translateY(100px);
+    }
+}
+
+@keyframes moving3 {
+    from {
+        transform: rotate(0deg) translateX(350px) translateY(100px);
+    }
+    to {
+        transform: rotate(360deg) translateX(350px) translateY(100px);
+    }
+}
