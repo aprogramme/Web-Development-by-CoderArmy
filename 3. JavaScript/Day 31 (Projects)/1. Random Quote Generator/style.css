@@ -1,0 +1,87 @@
+/* 
+body {
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.quote {
+    border: 2px solid white;
+    padding: 35px;
+}
+
+button {
+    background-color: azure;
+    color: rgb(14, 7, 7);
+    font: bold;
+    margin-top: 10px;
+    height: 30px;
+
+} */
+
+
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    background: linear-gradient(135deg, #1f1f1f, #3a3a3a);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Container */
+.first {
+    text-align: center;
+}
+
+/* Quote Box */
+.quote {
+    border: 2px solid #fff;
+    padding: 30px 40px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    max-width: 500px;
+}
+
+/* Quote Text */
+.quote h1 {
+    font-size: 24px;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+/* Button */
+button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #fff;
+    color: #111;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+}
+
+button:hover {
+    background-color: #e3e3e3;
+    transform: translateY(-2px);
+}
