@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media tag</title>
+</head>
+<body>
+    
+    <h1>HTML MEDIA</h1>
+    <h2>Introduction</h2>
+    <p>HTML offers several tags specifically designed for embedding and controlling multimedia content on web pages. These are often referred to as "media tags" or "media elements."</p>
+    <ul>
+        <li><p><b>&lt;audio&gt;</b>: It is a useful tag if you want to add audio such as songs, or any sound files into your webpage.</p></li>
+        <li><p><b>&lt;video&gt;</b>: It is a standard way to embed a video into your web page.</p></li>
+    </ul>
+
+    <br>
+
+    <h2>First Principle: The Web is More Than Text and Images</h2>
+    <p>The fundamental truth is that a webpage should be able to deliver any kind of content, not just static text and pictures. For years, this was a major problem. To play a video or audio file, browsers had to rely on third-party <br> plugins like Adobe Flash, QuickTime, or Silverlight. This was inefficient, insecure, and inconsistent across different computers.</p>
+    <br>
+    <p><b>The Core Problem</b></p>
+    <p>How can we embed video and audio into a webpage in a standardized, native, and plugin-free way? We need a universal system that works on every modern browser, from a desktop PC to a mobile phone, without requiring <br> the user to install anything extra.</p>
+    <p><b>The Logical Solution: The HTML5 &lt;video&gt; and &lt;audio&gt; Tags</b></p>
+    <p>The solution was to create dedicated HTML tags whose sole purpose is to embed and control media.</p>
+
+    <hr>
+
+    <h3>Part 1: The Basics - Getting a Video on the Page</h3>
+    <p>The star of the show is the &lt;video&gt; tag. At its simplest, it just needs to know the source of the video file.</p>
+    <p><b>Code:</b></p>
+    <ul>&lt;video src="./video.mp4"&gt;&lt;/video&gt;</ul>
+    <p><b>Output:</b></p>
+    <video src="./video.mp4" height="700px"></video>
+    <p><b>The Problem We Immediately Face</b>: If you put this on a page, you'll just see the first frame of the video as a static image. You can't play it, pause it, or change the volume. It's not a video player; it's just a video frame.</p>
+    <p><b>The Solution</b>: We need to add player controls. The browser has a beautiful set of default controls built-in, and we can turn them on with a simple attribute.</p>
+    <br>
+    <h3>The controls Attribute: The Magic Switch</h3>
+    <p>The controls attribute is a boolean attribute. You don't need to set it to a value (controls="true" is unnecessary); its mere presence turns the feature on.</p>
+    <p><b>Code:</b></p>
+    <ul>&lt;video src="./video.mp4" controls&gt;&lt;/video&gt;</ul>
+    <p><b>Output:</b></p>
+    <video src="./video.mp4" height="700px" controls></video>
+    <p><b>Result</b>: You now have a fully functional video player on your page, complete with a play/pause button, a timeline scrubber, volume controls, and a fullscreen option. This is the simplest, most effective way to embed a video.</p>
+
+    <hr>
+
+    <h3>Part 2: Intermediate - Gaining More Control with Attributes</h3>
+    <p>Now that we have a player, how do we control its behavior and appearance? We use attributes.</p>
+    <ul>
+        <li><p><b>width and height</b>: Just like with an &lt;img&gt; tag, you can set the dimensions of the player. </p></li>
+        <p><b>Code:</b></p>
+        <p>&lt;video src="./video.mp4" width="500" height="400" controls&gt;&lt;/video&gt;</p>
+        <p><b>Output:</b></p>
+        <video src="./video.mp4" height="400" controls></video>
+        <br><br>
+        <li><p><b>autoplay</b>: This attribute will make the video start playing as soon as the page loads.</p></li>
+        <p><b>CRITICAL CAVEAT</b>: Modern browsers (Chrome, Safari, Firefox) will block autoplay with sound because it's a terrible user experience. To make autoplay work, you almost always have to add the muted attribute as well.</p>
+        <p><b>Code:</b></p>
+        <ul>&lt;video src="./video.mp4" autoplay muted controls&gt;&lt;/video&gt;</ul>
+        <p><b>Output:</b></p>
+        <video src="./video.mp4" height="400px" autoplay muted controls></video>
+        <br><br>
+        <li><p><b>loop</b>: Makes the video automatically restart from the beginning when it finishes. Great for background videos.</p></li>
+        <li><p><b>poster</b>: This is a fantastic feature for user experience. It specifies an image to display before the video is played, just like a YouTube thumbnail. </p></li>
+        <p><b>Code:</b></p>
+        <ul>&lt;video src="./video.mp4" poster="./video_image.png" controls&gt;&lt;/video&gt;</ul>
+        <p><b>Output:</b></p>
+        <video src="./video.mp4" height="400px" poster="./video_image.png" controls></video>
+    </ul>
+     
+    <hr>
+
+    <h3>Part 3: The &lt;audio&gt; Tag</h3>
+    <p>The good news is that the &lt;audio&gt; tag works almost identically to the &lt;video&gt; tag, just without the visual component.</p>
+    <p><b>The Problem</b>: How do we embed a sound file (like a song or a podcast) with player controls?</p>
+    <p><b>The Solution</b>: Use the &lt;audio&gt; tag with the controls attribute.</p>
+    <p><b>Code:</b></p>
+    <ul><p>Listen to our theme song:</p></ul>
+    <ul>&lt;audio src="audio/theme-song.mp3" controls>&lt;/audio&gt;</ul>
+    <p><b>Output:</b></p>
+    <ul><audio src="./audio.mp3" controls></audio></ul>
+    <p><b>Result</b>: A clean audio player with play/pause, a timeline, and volume controls. It uses the same attributes like autoplay, loop, and muted.</p>
+
+    <hr>
+
+    <h3>Part 4: Advanced & Professional - Solving Real-World Problems</h3>
+    <p>This is where we move from just making a player work to making it work for everyone, on every browser.</p>
+    <p><b>Problem #1: Not all browsers support the same video formats.</b></p>
+    <p>Chrome might prefer the modern .webm format, while Safari on an iPhone might only support .mp4. If you only provide one src, some of your users won't be able to see your video.</p>
+    <p><b>The Solution: The &lt;source&gt; Element</b></p>
+    <p>Instead of putting the src on the &lt;video&gt; tag itself, you can provide multiple formats inside the tag using the &lt;source&gt; element. The browser will go down the list and play the first one it supports.</p>
+    <p><b>Code:</b></p>
+    <img src="./video1.png" alt="">
+    <p>This is the robust, professional way to embed media. The type attribute tells the browser what kind of file it is so it doesn't have to waste time downloading a file it can't play.</p>
+    
+    <hr>
+
+    <h3>The Two Ways to Create the Copyright Symbol ©</h3>
+    <p>You can use either the entity name or the entity number. Both produce the exact same result. The entity name is generally easier to remember.</p>
+    <h4>1. Using the Entity Name (Recommended)</h4>
+    <p>This is the most common and readable method.</p>
+    <p><b>Code</b>: & copy;</p>
+    <p>Example Usage in a Footer:</p>
+    <img src="./video2.png" alt="">
+    <p><b>Output:</b></p>
+    <p>Copyright &copy; 2024 My Awesome Website. All Rights Reserved.</p>
+    <h4>2. Using the Entity Number</h4>
+    <p>This method uses the character's numerical code. It works just as well but is less descriptive.</p>
+    <p><b>Code</b>: & #169;</p>
+    <p>Example Usage:</p>
+    <img src="./video3.png" alt="">
+    <p><b>Output:</b></p>
+    <p>Copyright &#169; 2024 My Awesome Website. All Rights Reserved.</p>
+
+    <br>
+
+    <h3>Other Common Symbol Entities</h3>
+    <img src="./video4.png" alt="">
+
+    <br><br><br>
+
+    <a href="./list.html" target="_blank"><b>List</b></a>&nbsp;&nbsp;
+    <a href="./table.html" target="_blank"><b>Table</b></a>&nbsp;&nbsp;
+    <a href="./file_path.html" target="_blank"><b>File Path</b></a>&nbsp;&nbsp;
+    <a href="./form.html" target="_blank"><b>Forms</b></a>&nbsp;&nbsp;
+    <a href="../CSS/css1.html" target="_blank"><b>CSS</b></a>
+
+    
+</body>
+</html>

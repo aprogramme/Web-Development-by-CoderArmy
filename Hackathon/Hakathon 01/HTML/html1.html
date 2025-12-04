@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+</head>
+<body>
+    <h1>HTML: Hyper Text Markup Language</h1>
+        <p>Topic Cover:</p>
+        <ul>
+            <li><a href="./list.html" target="_blank">List</a></li>
+            <li><a href="./table.html" target="_blank">Table</a></li>
+            <li><a href="./file_path.html" target="_blank">File Path</a></li>
+            <li><a href="./form.html" target="_blank">Forms</a></li>
+            <li><a href="./media.html" target="_blank">Media Tag</a></li>
+        </ul>
+
+        <a href="../CSS/css1.html" target="_blank"><b>CSS</b></a>
+
+        <h2>Introduction</h2>
+        <!-- <img src="./html.png" alt=""> -->
+        <p>HTML stands for HyperText Markup Language. It is the standard language used to create and structure the content of a webpage.</p>
+        <ul>
+            <li><p><b>HyperText:</b> This refers to the ability to create links that connect web pages to one another, making the web a connected "web" of information.</p></li>
+            <li><p><b>Markup Language:</b> This means you use "tags" to surround your content, giving that content meaning and structure. You are "marking up" a plain text document.</p></li>
+        </ul>
+        <p>First Website: <a href="https://info.cern.ch/hypertext/WWW/TheProject.html" target="_blank"">https://info.cern.ch/hypertext/WWW/TheProject.html</a></p>
+        <br>
+        <p>Install Required Software:</p>
+        <h4>1. Install Visual Studio Code</h4>
+        <p>This is a free piece of software from Microsoft that you will use to write your code.</p>
+        <ul><a href="https://code.visualstudio.com/" target="_blank">https://code.visualstudio.com/</a></ul>
+        <h4>2: Install Visual Studio Code Extensions</h4>
+        <ul><a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server" target="_blank">Live Preview</a></ul>
+        <ul><a href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode" target="_blank">Prettier</a></ul>
+        <ul><a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer" target="_blank">Live Server</a></ul>
+
+        <br>
+        <hr>
+
+        <h2>HTML Tags</h2>
+        <img src="./html_tag.jpeg" alt="">
+        <br><br>
+
+        <h2>1: The Heading (&lt;h1&gt; to &lt;h6&gt;)</h2>
+        <p><b>What it is:</b> Headings are tags used to define titles and subtitles on your page. They are crucial for creating a logical hierarchy and outline for your content.</p>
+        <ul>&lt;h1&gt;Heading 1&lt;/h1&gt;</ul>
+        <ul>&lt;h2&gt;Heading 2&lt;/h2&gt;</ul>
+        <ul>&lt;h3&gt;Heading 3&lt;/h3&gt;</ul>
+        <ul>&lt;h4&gt;Heading 4&lt;/h4&gt;</ul>
+        <ul>&lt;h5&gt;Heading 5&lt;/h5&gt;</ul>
+        <ul>&lt;h6&gt;Heading 6&lt;/h6&gt;</ul>
+        <ul>
+            <li><p>&lt;h1&gt;: The most important heading, typically used only once per page for the main title.</p></li>
+            <li><p>&lt;h2&gt;: A major section heading.</p></li>
+            <li><p>&lt;h3&gt;: A sub-section heading under an &lt;h2&gt;</p></li>
+            <li><p>...and so on, down to &lt;h6&gt;, the least important heading.</p></li>
+        </ul>
+        <p><b>The Purpose:</b> To structure your document in a way that is understandable to both humans and machines (like search engines and screen readers). It is not just for making text big; it is for giving the text structural importance.</p>
+
+        <br> 
+
+        <h2>2. The Paragraph (&lt;p&gt;)</h2>
+        <p><b>What it is:</b> The paragraph tag is the most common tag you'll use. It's for grouping sentences and blocks of text together.</p>
+        <p><b>The Tag: </b>&lt;p&gt;</p>
+        <p><b>The Purpose:</b> To define a distinct paragraph of text. Browsers automatically add a little bit of space before and after a &lt;p&gt; element, separating it from other content. You should not use multiple line breaks; you should use multiple &lt;p&gt; tags.</p>
+        <p>&lt;p&gt;This is the first paragraph. It contains several sentences about a topic. &lt;/p&gt;</p>
+        <p>&lt;p&gt;This is a second, separate paragraph. The browser will display it with a space between it and the first one.&lt;/p&gt;</p>
+
+        <br>
+
+        <h2>3: HTML Horizontal Rules (&lt;hr&gt;)</h2>
+        <p>The &lt;hr&gt; tag defines a thematic break in an HTML page, and is most often displayed as a horizontal rule.</p>
+        <p>The &lt;hr&gt; element is used to separate content (or define a change) in an HTML page:</p>
+        <p><b>Code:</b></p>
+        <ul><p>This is the first topic.</p></ul>
+        <ul>&lt;hr&gt;</ul>
+        <ul><p>This is a completely different topic.</p></ul>
+
+        <p><b>Output:</b></p>
+        <ul><p>This is the first topic.</p></ul>
+        <ul>___________________________________________________</ul>
+        <ul><p>This is a completely different topic.</p></ul>
+
+        <br>
+
+        <h2>4. The Line Break Tag (&lt;br&gt;)</h2>
+        <p>This tag tells the browser, "Stop writing on this line and immediately start on the next one." It's like hitting the Enter key once in a poem or an address.</p>
+        <ul>
+            <li><p><b>Purpose: </b>Creates a single line break.</p></li>
+            <li><p><b>Example:</b> codeHtml</p></li>
+            <li><p>Code: </p></li>
+            <ul><p>221B Baker Street &lt;br&gt; London, England</p></ul>
+            <li><p>Output: </p></li>
+            <ul><p>221B Baker Street <br> London, England</p></ul>
+        </ul>
+
+        <br>
+
+        <h2>5. List Elements (&lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;)</h2>
+        <p><b>What it is:</b> These tags are used to create <a href="./list.html" target="_blank"><b>Lists</b></a>. This is a perfect example of nesting.</p>
+        <p>The Tags:</p>
+        <ul>
+            <li><p>&lt;ul&gt;: An <b>Unordered</b> List. It creates a bulleted list.</p></li>
+            <li><p>&lt;ol&gt;: An <b>Ordered </b> List. It creates a numbered list.</p></li>
+            <li><p>&lt;li&gt;: An <b>List </b> item. Each item in either type of list must be wrapped in an &lt;li&gt; tag</p></li>
+        </ul>
+        <p><b>The Purpose:</b> To group related items together in a list format.</p>
+        <p><b>Example (Nesting in action):</b></p>
+        <p>The &lt;li&gt; elements are nested as children inside the &lt;ul&gt; parent.</p>
+        <img src="./list.png" alt="">
+
+        <br>
+
+        <h2>6: The Anchor Tag (&lt;a&gt;)</h2>
+        <p><b>What it is: </b>The Anchor tag is what makes the web "hypertext." It is used to create a hyperlink to another webpage, a file, or a location within the same page.</p>
+        <p><b>The Tag:</b> &lt;a&gt;</p>
+        <p><b>The Purpose: </b>To make text (or an image) clickable, allowing users to navigate. It requires </p>
+        <p>an attribute called <b>href (hypertext reference)</b> to specify the destination URL.</p>
+        <p>Example : <a href="https://www.coderarmy.in/">Vist Coder Army</a></p>
+        <br>
+        <h3>HTML Links - The target Attribute</h3>
+        <p>By default, the linked page will be displayed in the current browser window. To change this, you must specify another target for the link.</p>
+        <p>The <b>target</b> attribute specifies where to open the linked document.</p>
+        <p>The <b>target</b> attribute can have one of the following values:</p>
+        <ul>
+            <li><p><b>_self</b> - Default. Opens the document in the same window/tab as it was clicked</p></li>
+            <ul><p>Example : <a href="https://www.coderarmy.in/">Vist Coder Army</a></p></ul>
+            <li><p><b>_blank</b> - Opens the document in a new window or tab</p></li>
+            <ul><p>Example : <a href="https://www.coderarmy.in/" target="_blank">Vist Coder Army</a></p></ul>
+        </ul>
+
+        <br>
+
+        <h2>7. The Image Tag (&lt;img&gt;)</h2>
+        <p><b>What it is: </b>The Image tag is a <b>self-closing tag</b> used to embed an image onto your page.</p>
+        <p><b>The Tag:</b> &lt;img&gt;</p>
+        <p><b>The Purpose:</b> To display a visual image. It requires two main attributes:</p>
+        <ul>
+            <li><p>src (source): The path or URL to the image file. This is mandatory.</p></li>
+            <li><p>alt (alternative text): A description of the image. This is vital for accessibility (screen readers for the visually impaired will read this out) and for when the image fails to load.</p></li>
+        </ul>
+        <p><b>Code:</b></p>
+        <ul><p>&lt;img src="./coderarmy.png" alt="coderarmy"&gt;</p></ul>
+        <p><b>Output: </b></p>
+        <ul><p><img src="./coderarmy.png" alt=""></p></ul>
+
+        <br>
+
+        <a href="./list.html" target="_blank"><b>List</b></a>&nbsp;&nbsp;
+        <a href="./table.html" target="_blank"><b>Table</b></a>&nbsp;&nbsp;
+        <a href="./file_path.html" target="_blank"><b>File Path</b></a>&nbsp;&nbsp;
+        <a href="./form.html" target="_blank"><b>Forms</b></a>&nbsp;&nbsp;
+        <a href="./media.html" target="_blank"><b>Media</b></a>&nbsp;&nbsp;
+        <a href="../CSS/css1.html" target="_blank"><b>CSS</b></a>
+    
+</body>
+</html>
