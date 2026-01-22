@@ -1,0 +1,22 @@
+import { useState } from "react";
+import Counting from "./Counting";
+
+function Clock() {
+
+    const [clocks, setClock] = useState(["A", "B", "C"]);
+
+    function handleChange() {
+        setClock(["D", ...clocks]);
+    }
+ 
+    return (
+        <>
+        <button onClick={handleChange}>Increase Clock</button>
+        <div style={{display: "flex", justifyContent:"center", alignItems:"center", gap: "20px", flexWrap:"wrap"}}>
+            {clocks.map(clock => <Counting key={clock} name={clock}></Counting>)}
+        </div>
+        </>
+    )
+}
+
+export default Clock;
